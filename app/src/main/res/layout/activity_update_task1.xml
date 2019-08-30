@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_section_background"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp">
+
+            <View
+                android:id="@+id/weight_size_view1"
+                android:layout_width="2dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/weight_size_view1"
+                app:hintTextAppearance="@style/MyHintText">
+
+                <TextView
+                    android:id="@+id/Task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:hint="task_namea"
+                    android:maxLines="1"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:theme="@style/MyEditText"
+                    tools:ignore="Autofill,TextFields" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/weight_size_view1"
+                app:hintTextAppearance="@style/MyHintText">
+
+                <TextView
+                    android:id="@+id/task_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:hint="task_namea"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:editable="false"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:theme="@style/MyEditText"
+                    tools:ignore="Autofill" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+       <!-- <TextView
+            android:id="@+id/project_type1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Project Type"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <TextView
+            android:id="@+id/project_type_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />-->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <in.technitab.teamapp.util.CustomEditText
+                android:id="@+id/project_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/project_name"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/mediumTextSize"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/activity_name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Activity Name"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <TextView
+            android:id="@+id/activity_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+<!--        <TextView
+            android:id="@+id/assignees_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Assignee"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <TextView
+            android:id="@+id/assignees_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />-->
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <EditText
+                android:id="@+id/estimated_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Estimated Hours"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:nextFocusDown="@id/first_name"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/mediumTextSize"
+                android:theme="@style/MyEditText" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/Urgency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Urgency"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <TextView
+            android:id="@+id/urgency_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Importance"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <TextView
+            android:id="@+id/importance_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Priorty"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <TextView
+            android:id="@+id/priority_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <EditText
+                android:id="@+id/assigned_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/assigned_date"
+                android:imeOptions="actionDone"
+                android:inputType="date"
+                android:maxLines="1"
+                android:nextFocusDown="@id/first_name"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/mediumTextSize"
+                android:theme="@style/MyEditText"
+                tools:ignore="Autofill" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <EditText
+                android:id="@+id/dead_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/dead_line"
+                android:imeOptions="actionDone"
+                android:inputType="date"
+                android:maxLines="1"
+
+                android:nextFocusDown="@id/first_name"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/mediumTextSize"
+                android:theme="@style/MyEditText"
+                tools:ignore="Autofill" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <EditText
+                android:id="@+id/Notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Notice"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:editable="false"
+                android:inputType="none"
+                android:nextFocusDown="@id/first_name"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/mediumTextSize"
+                android:theme="@style/MyEditText"
+                tools:ignore="Deprecated" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <EditText
+                android:id="@+id/task_deliverables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_deliverables"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:maxLines="1"
+                android:editable="false"
+                android:nextFocusDown="@id/first_name"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/mediumTextSize"
+                android:theme="@style/MyEditText"
+                tools:ignore="Deprecated" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/status1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="14dp"
+            android:text="Status"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/calendarDateTextSize" />
+
+        <Spinner
+            android:id="@+id/status_spinner"
+            style="@style/spinnerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp">
+
+            <View
+                android:id="@+id/weight_size_view"
+                android:layout_width="2dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/weight_size_view"
+                app:hintTextAppearance="@style/MyHintText">
+
+                <in.technitab.teamapp.util.CustomEditText
+                    android:id="@+id/start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/date"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:theme="@style/MyEditText"
+                    tools:ignore="TextFields" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/weight_size_view"
+                app:hintTextAppearance="@style/MyHintText">
+
+                <in.technitab.teamapp.util.CustomEditText
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:hint="Hours"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:inputType="time"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:theme="@style/MyEditText"
+                    tools:ignore="TextFields" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/submit_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/submit"
+
+            android:onClick="Submit"
+            android:textColor="@color/colorIconText" />
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_section_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSecondary"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/bookingMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorSecondary"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/extraHeadingTextSize" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorSecondary"
+                    android:text="@string/service"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/subMediumTextSize" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorSecondary"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/subMediumTextSize"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorSecondary"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/subMediumTextSize" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/headerLayout"
+                android:background="@color/colorDivider" />
+
+            <Spinner
+                android:id="@+id/purpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerLayout" />
+
+            <TextView
+                android:id="@+id/pickImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/purpose"
+                android:layout_marginLeft="24dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/attach_image_of_building_board"
+                android:textColor="@color/common_google_signin_btn_text_light"
+                android:textSize="40dp" />
+
+
+            <!-- <RelativeLayout
+                 android:id="@+id/relative"
+                 android:layout_width="match_parent"
+                 android:layout_height="200dp"
+                 android:layout_below="@id/pickImage">
+         -->
+            <ImageView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pickImage"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/view_attachment"
+                android:scaleType="fitXY"
+                />
+
+
+            <!-- </RelativeLayout>-->
+            <!--android:drawableEnd="@drawable/ic_check_circle"-->
+
+            <Button
+                android:id="@+id/upload"
+                android:layout_below="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_bg"
+                android:foreground="?android:selectableItemBackground"
+                android:text="@string/submit"
+                android:textColor="@color/colorIconText" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

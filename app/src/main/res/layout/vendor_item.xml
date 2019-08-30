@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="vendorListViewModel"
+            type="in.technitab.teamapp.viewmodel.ItemVendorViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/vendorItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorIconText"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/display_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/action"
+            android:padding="8dp"
+            android:text="@{vendorListViewModel.displayName}"
+            android:textColor="@color/colorPrimaryText" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_name"
+            android:layout_toStartOf="@id/action"
+            android:fontFamily="@string/fontFamilyLight"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@{vendorListViewModel.description}"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/smallTextSize" />
+
+    </RelativeLayout>
+
+
+</layout>

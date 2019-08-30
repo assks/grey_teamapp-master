@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="uploadImages">Set your image</string-array>
+    <string-array name="itemIds">itemid</string-array>
+</resources>

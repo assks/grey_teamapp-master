@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="tecViewModel"
+            type="in.technitab.teamapp.viewmodel.TecViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/ic_section_background">
+
+
+        <LinearLayout
+            android:id="@+id/tec_status_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:visibility="@{tecViewModel.tecStatusFilter}">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onStatusClick"
+                    android:text="@string/all"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDivider"
+                    android:textSize="@dimen/headingTextSize" />
+
+                <TextView
+                    android:id="@+id/draft"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onStatusClick"
+                    android:text="@string/draft"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDivider"
+                    android:textSize="@dimen/headingTextSize" />
+
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onStatusClick"
+                    android:text="@string/submit"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDivider"
+                    android:textSize="@dimen/headingTextSize" />
+
+                <TextView
+                    android:id="@+id/open"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onStatusClick"
+                    android:text="@string/open"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDivider"
+                    android:textSize="@dimen/headingTextSize" />
+
+                <TextView
+                    android:id="@+id/paid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onStatusClick"
+                    android:text="@string/paid"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDivider"
+                    android:textSize="@dimen/headingTextSize" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tecRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tec_status_layout"
+            android:layout_marginTop="2dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:visibility="@{tecViewModel.tecRecycler}"
+            tools:listitem="@layout/item_tec" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:visibility="@{tecViewModel.tecProgress}" />
+
+
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/ic_sim"
+            android:drawablePadding="10dp"
+            android:gravity="center_horizontal"
+            android:text="@{tecViewModel.messageLabel}"
+            android:textSize="@dimen/headingTextSize"
+            android:visibility="gone"
+            app:visibility="@{tecViewModel.tecLabel}" />
+
+    </RelativeLayout>
+
+</layout>

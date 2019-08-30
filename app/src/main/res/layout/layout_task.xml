@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+
+
+    <TextView
+        android:id="@+id/project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/headingTextSize"
+        android:hint="Project_name"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/colorPrimaryText"
+        />
+    <TextView
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:layout_below="@id/project"
+        android:paddingRight="4dp"
+        android:hint="Activity_name"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/headingTextSize"
+        />
+
+    <CheckBox
+        android:id="@+id/is_billable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity"
+
+        android:buttonTint="#000000"
+        android:paddingLeft="5dp"
+        android:paddingTop="8dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="8dp" />
+
+    <!-- <ImageView
+         android:id="@+id/description"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_below="@id/project"
+         android:contentDescription="@string/description"
+         android:gravity="bottom"
+         android:paddingBottom="8dp"
+         android:paddingLeft="5dp"
+         android:paddingRight="5dp"
+         android:paddingTop="8dp"
+         android:src="@drawable/ic_writing" />
+ -->
+    <Button
+        android:id="@+id/description"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="bottom"
+        android:paddingLeft="5dp"
+        android:paddingTop="8dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="8dp"
+
+        android:text="@string/_8942"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/time_spent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity"
+        android:layout_toStartOf="@id/description"
+        android:focusable="true"
+        android:hint="@string/hours_text"
+        android:clickable="true"
+        android:editable="false"
+        android:maxLength="6"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity"
+        android:layout_toStartOf="@id/time_spent"
+        android:layout_toEndOf="@id/is_billable"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:maxLines="2"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Designing"
+        android:textSize="@dimen/mediumTextSize" />
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="8dp"
+        android:text="Status : "
+        android:textSize="@dimen/subMediumTextSize"
+        android:paddingRight="5dp"
+        android:paddingBottom="8dp"
+        android:layout_below="@id/is_billable"
+        />
+    <EditText
+        android:id="@+id/timesheetstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_name"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="@dimen/mediumTextSize"
+        android:layout_toEndOf="@id/status"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:clickable="false"
+        android:editable="false"
+        android:focusable="false"
+        android:textAlignment="center"
+        />
+
+</RelativeLayout>

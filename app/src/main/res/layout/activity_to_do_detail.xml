@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.ToDoDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/ic_section_background">
+
+
+        <RelativeLayout
+            android:id="@+id/due_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/due_date_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box" />
+
+            <ImageView
+                android:id="@+id/clear_due_date_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box" />
+
+
+            <TextView
+                android:id="@+id/due_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/clear_due_date_image"
+                android:layout_toEndOf="@id/due_date_image"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="@string/set_reminder_text"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/extraHeadingTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/due_date"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/due_date_image"
+                android:background="@color/colorDivider" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reminder_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/due_date_layout"
+
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/reminder_time_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box" />
+
+            <ImageView
+                android:id="@+id/clear_reminder_time_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box" />
+
+
+            <TextView
+                android:id="@+id/reminder_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/clear_reminder_time_image"
+                android:layout_toEndOf="@id/reminder_time_image"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="@string/remind_me_text"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/extraHeadingTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/reminder_time"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/reminder_time_image"
+                android:background="@color/colorDivider" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/repeat_reminder_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_time_layout"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/repeat_reminder_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/clear_repeat_reminder_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/repeat_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/clear_repeat_reminder_image"
+                android:layout_toEndOf="@id/repeat_reminder_image"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="@string/repeat_reminder_text"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/extraHeadingTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/repeat_reminder"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/repeat_reminder_image"
+                android:background="@color/colorDivider" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/activity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repeat_reminder_layout"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/activity_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/clear_activity_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/clear_activity_image"
+                android:layout_toEndOf="@id/activity_image"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="@string/link_activity_text"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/extraHeadingTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/activity"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/activity_image"
+                android:background="@color/colorDivider" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/spend_hours_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_layout"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/spend_hours_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/clear_spend_hours_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_box"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/spend_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/clear_spend_hours_image"
+                android:layout_toEndOf="@id/spend_hours_image"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="@string/spent_hour"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/extraHeadingTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/spend_hours"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/spend_hours_image"
+                android:background="@color/colorDivider" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/colorIconText" />
+
+
+    </RelativeLayout>
+
+</layout>

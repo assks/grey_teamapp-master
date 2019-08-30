@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="2dp"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/ic_section_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/ic_section_background"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/marginBetweenField"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="My Currently Set Location"
+
+                    android:textSize="@dimen/headingTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/type_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="type_id"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                    <TextView
+                        android:id="@+id/vender_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/addres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No Previous Data Found "
+                    android:textSize="@dimen/mediumTextSize" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select location type"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/calendarDateTextSize" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/spinnerUnderline"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <!-- <Spinner
+                 android:id="@+id/spinner"
+                 android:layout_width="match_parent"
+                 android:layout_height="30dp"
+                 android:layout_margin="20dp"
+                 android:background="@drawable/ic_section_background"
+                 android:textColor="@android:color/white" />-->
+
+            <!--<TextView
+                android:id="@+id/project_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="- -Select Project Name- -"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_section_background" />-->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_section_background"
+                android:visibility="gone">
+
+                <in.technitab.teamapp.util.CustomEditText
+                    android:id="@+id/project_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/ic_launcher_background"
+                    android:focusable="false"
+                    android:hint="@string/project_name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:theme="@style/MyEditText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/state1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/calendarDateTextSize" />
+
+                <Spinner
+                    android:id="@+id/state"
+                    style="@style/spinnerUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lodging1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lodging"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/calendarDateTextSize" />
+
+                <Spinner
+                    android:id="@+id/hotel"
+                    style="@style/spinnerUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/fetch_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/fetch_address"
+                android:textAllCaps="false"
+                android:textColor="@color/colorIconText" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/latlong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/getlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/submi"
+                android:textAllCaps="false"
+                android:textColor="@color/colorIconText" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/pick_coordina"
+                android:textAllCaps="false"
+                android:textColor="@color/colorIconText" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
